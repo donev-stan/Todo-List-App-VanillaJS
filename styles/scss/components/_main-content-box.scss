@@ -1,0 +1,155 @@
+.main-content-box {
+	display: flex;
+
+	max-width: 70%;
+	margin: 0 auto;
+
+	.todo-list-box {
+		flex: 2;
+		padding: 0 20px 20px;
+
+		.todo-list-title {
+			font-size: 1.3rem;
+		}
+
+		.task-done {
+			text-decoration: line-through;
+		}
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			.item {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				// animation: itemEnter 0.3s ease 0s 1 normal forwards;
+				animation: countEnter 1s ease 0s 1 normal forwards;
+
+				.check-item-box {
+					display: flex;
+					align-items: center;
+
+					.check-item-img-btn {
+						width: 30px;
+						height: 30px;
+
+						border-radius: 10px;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+				}
+
+				.list-item-text {
+					word-break: break-all;
+					line-height: 1rem;
+					display: flex;
+					margin-top: 1px;
+				}
+
+				.delete-item-box {
+					display: flex;
+					align-items: center;
+
+					.delete-item-img-btn {
+						width: 30px;
+						height: 30px;
+
+						border-radius: 10px;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+				}
+
+				.edit-item-box {
+					display: flex;
+					align-items: center;
+
+					.edit-item-img-btn {
+						width: 30px;
+						height: 30px;
+
+						border-radius: 10px;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.todo-list-info-box {
+		display: flex;
+		align-items: flex-end;
+		// justify-content: center;
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px;
+
+		.completed-box,
+		.ongoing-box {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+
+			span {
+				margin-top: -15px;
+				font-size: 2rem;
+			}
+
+			.start-animation {
+				animation: countEnter 1s ease 0s 1 normal forwards;
+			}
+		}
+	}
+}
+
+@keyframes itemEnter {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes countEnter {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 750px) {
+	.main-content-box {
+		flex-direction: column;
+
+		.todo-list-info-box {
+			align-items: center;
+		}
+
+		.todo-list-box {
+			order: 1;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.main-content-box {
+		max-width: 100%;
+	}
+}

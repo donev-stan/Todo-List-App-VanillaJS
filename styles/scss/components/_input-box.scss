@@ -1,0 +1,36 @@
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 20px 0;
+
+  #list-item-input {
+    min-width: 60%;
+    height: 30px;
+    padding: 0 20px;
+  }
+
+  #list-item-add-btn {
+    padding: 0 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .input-box {
+    flex-direction: column;
+    gap: 10px;
+
+    max-width: 80%;
+    margin: 0 auto;
+
+    #list-item-add-btn {
+      max-width: 150px;
+      margin: 0 auto;
+    }
+  }
+}

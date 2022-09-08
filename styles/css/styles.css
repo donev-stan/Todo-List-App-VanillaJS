@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+.container {
+  border: 1px solid rgb(124, 124, 124);
+  box-shadow: 0px 1px 10px 1px rgb(124, 124, 124);
+  max-width: 1600px;
+  margin: auto;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.input-box #list-item-input {
+  min-width: 60%;
+  height: 30px;
+  padding: 0 20px;
+}
+.input-box #list-item-add-btn {
+  padding: 0 20px;
+}
+.input-box #list-item-add-btn:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .input-box {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .input-box #list-item-add-btn {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
+.main-content-box {
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.main-content-box .todo-list-box {
+  flex: 2;
+  padding: 0 20px 20px;
+}
+.main-content-box .todo-list-box .todo-list-title {
+  font-size: 1.3rem;
+}
+.main-content-box .todo-list-box .task-done {
+  text-decoration: line-through;
+}
+.main-content-box .todo-list-box .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-content-box .todo-list-box .list .item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: countEnter 1s ease 0s 1 normal forwards;
+}
+.main-content-box .todo-list-box .list .item .check-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .check-item-box .check-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .check-item-box .check-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-box .list .item .list-item-text {
+  word-break: break-all;
+  line-height: 1rem;
+  display: flex;
+  margin-top: 1px;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box .delete-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .delete-item-box .delete-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box {
+  display: flex;
+  align-items: center;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box .edit-item-img-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.main-content-box .todo-list-box .list .item .edit-item-box .edit-item-img-btn:hover {
+  cursor: pointer;
+}
+.main-content-box .todo-list-info-box {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.main-content-box .todo-list-info-box .completed-box,
+.main-content-box .todo-list-info-box .ongoing-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.main-content-box .todo-list-info-box .completed-box span,
+.main-content-box .todo-list-info-box .ongoing-box span {
+  margin-top: -15px;
+  font-size: 2rem;
+}
+.main-content-box .todo-list-info-box .completed-box .start-animation,
+.main-content-box .todo-list-info-box .ongoing-box .start-animation {
+  animation: countEnter 1s ease 0s 1 normal forwards;
+}
+
+@keyframes itemEnter {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes countEnter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 750px) {
+  .main-content-box {
+    flex-direction: column;
+  }
+  .main-content-box .todo-list-info-box {
+    align-items: center;
+  }
+  .main-content-box .todo-list-box {
+    order: 1;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .main-content-box {
+    max-width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower", cursive;
+  font-size: large;
+}
+
+#wrapper {
+  padding: 30px 20px;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+::selection {
+  color: black;
+  background: yellow;
+}
+
+/*# sourceMappingURL=styles.css.map */

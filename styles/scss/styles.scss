@@ -1,0 +1,30 @@
+@use "./components/container.scss";
+@use "./components/input-box.scss";
+@use "./components/main-content-box.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Indie Flower", cursive;
+	font-size: large;
+}
+
+#wrapper {
+	padding: 30px 20px;
+}
+
+.unselectable {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+::selection {
+	color: black;
+	background: yellow;
+}
